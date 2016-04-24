@@ -1,11 +1,19 @@
 <!doctype html>
 <html>
+    <head>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/skeleton.css">
+
+    </head>
   <body>
+      
+      
+      <div class="container">
     <h1>Download files using the WebTorrent protocol (BitTorrent over WebRTC).</h1>
 
     <form>
       <label for="torrentId">Download from a magnet link: </label>
-      <input name="torrentId", placeholder="magnet:" value="magnet:?xt=urn:btih:6a9759bffd5c0af65319979fb7832189f4f3c35d&dn=sintel.mp4&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com&tr=wss%3A%2F%2Ftracker.webtorrent.io&ws=https%3A%2F%2Fwebtorrent.io%2Ftorrents%2Fsintel-1024-surround.mp4">
+      <input class="u-full-width" type="text" name="torrentId", placeholder="magnet:" value="magnet:?xt=urn:btih:6a9759bffd5c0af65319979fb7832189f4f3c35d&dn=sintel.mp4&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com&tr=wss%3A%2F%2Ftracker.webtorrent.io&ws=https%3A%2F%2Fwebtorrent.io%2Ftorrents%2Fsintel-1024-surround.mp4">
       <button type="submit">Download</button>
     </form>
 
@@ -63,8 +71,11 @@
       function log (str) {
         var p = document.createElement('p')
         p.innerHTML = str
-        document.querySelector('.log').appendChild(p)
+        //document.querySelector('.log').appendChild(p)
+        console.log(str);
       }
     </script>
+    
+    </div>
   </body>
 </html>
